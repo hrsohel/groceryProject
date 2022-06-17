@@ -1,0 +1,80 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    font-family: 'SiyamRupali', sans-serif;
+}
+.form-container {
+    background-image: url('../images/class-green-board.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.form-container form {
+    box-shadow: 0 0 .3rem yellow;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+.form-container form  input{
+    background: transparent;
+    color: white;
+}
+.scrollable {
+    overflow-y: scroll;
+    max-height: 300px;
+}
+.scrollable table thead {
+   position: sticky;
+   top: 0;
+   background-color: rgb(250, 250, 213);
+   color: #333;
+}
+.responsive {
+    overflow-x: auto;
+}
+.storage table tr:nth-child(even), #product_list tr:nth-child(even),
+.customer table tr:nth-child(even), .transaction table tr:nth-child(even) {
+    background-color: #008F8C;
+}
+.storage table tr:nth-child(odd), #product_list tr:nth-child(odd), 
+.customer table tr:nth-child(odd), .transaction table tr:nth-child(odd) {
+    background-color: #0FC2C0;
+}
+/* .storage table tr:hover,#product_list tr:hover {
+    background-color: lightgray;
+} */
+.storage table td,#product_list td,#product_list th, .storage table th, .customer table td,
+.transaction table td {
+    padding: .5rem 0;
+    border: 1px solid white;
+}
+.store {
+    background-color: rgba(0, 0, 0, .7);
+}
+.store .container form {
+   margin: 0 auto;
+   margin-top: 10rem;
+}
+@media (max-width: 768px) {
+    .form-container form {
+        width: 98% !important;
+        margin: .5rem auto;
+    }
+    #table, #product_list, .customer table, .transaction table {
+        min-width: 150vw;
+    }
+}
+@media(max-width: 550px) {
+    .form-container form input {
+        width: 100% !important;
+    }
+    .storage table {
+        min-width: 200vw;
+    }
+    #table, #product_list, .customer table, .transaction table {
+        min-width: 250vw;
+    }
+    .store .container form  label {
+        display: block;
+    }
+    .store .container form {
+        margin-top: 5rem ;
+    }
+}
