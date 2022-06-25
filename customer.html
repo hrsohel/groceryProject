@@ -14,6 +14,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header class="flex items-center justify-between p-4 bg-green-500">
+        <div class="text-2xl text-white">Logo</div>
+        <ul class="flex items-center justify-center text-white">
+            <li><a class="mr-4 text-lg" href="/">Home</a></li>
+            <li><a class="mr-4 text-lg" href="strore.html">Storage</a></li>
+            <li><a class="mr-4 text-lg" href="customer.html">Customer</a></li>
+        </ul>
+    </header>
     <section class="customer p-4">
         <h1 class="w-72 rounded-md mx-auto my-3 py-2 text-center text-lg text-white bg-yellow-500">Customer</h1>
         <form action="">
@@ -34,7 +42,7 @@
                         <td>মোঃ আব্দুল্লাহ</td>
                         <td>২০১৮৭০ টাকা</td>
                         <td>
-                            <a href="moneyStore.html" class="px-2 py-1 cursor-pointer rounded-md text-center bg-green-500">জমা</a>
+                            <button data-value="form1" class="px-2 py-1 cursor-pointer rounded-md text-center bg-green-500">জমা</button>
                             <a href="transaction.html" class="px-2 py-1 cursor-pointer rounded-md text-center bg-blue-500">পূর্ব হিসাব</a>
                         </td>
                     </tr>
@@ -43,7 +51,7 @@
                         <td>মোঃ আব্দুল্লাহ</td>
                         <td>২০১৮৭০ টাকা</td>
                         <td>
-                            <a href="moneyStore.html" class="px-2 py-1 cursor-pointer rounded-md text-center bg-green-500">জমা</a>
+                            <button data-value="form2" class="px-2 py-1 cursor-pointer rounded-md text-center bg-green-500">জমা</button>
                             <a href="transaction.html" class="px-2 py-1 cursor-pointer rounded-md text-center bg-blue-500">পূর্ব হিসাব</a>
                         </td>
                     </tr>
@@ -52,7 +60,7 @@
                         <td>মোঃ আব্দুল্লাহ</td>
                         <td>২০১৮৭০ টাকা</td>
                         <td>
-                            <a href="moneyStore.html" class="px-2 py-1 cursor-pointer rounded-md text-center bg-green-500">জমা</a>
+                            <button data-value="form3" class="px-2 py-1 cursor-pointer rounded-md text-center bg-green-500">জমা</button>
                             <a href="transaction.html" class="px-2 py-1 cursor-pointer rounded-md text-center bg-blue-500">পূর্ব হিসাব</a>
                         </td>
                     </tr>
@@ -61,7 +69,7 @@
                         <td>মোঃ আব্দুল্লাহ</td>
                         <td>২০১৮৭০ টাকা</td>
                         <td>
-                            <a href="moneyStore.html" class="px-2 py-1 cursor-pointer rounded-md text-center bg-green-500">জমা</a>
+                            <button data-value="form4" class="px-2 py-1 cursor-pointer rounded-md text-center bg-green-500">জমা</button>
                             <a href="transaction.html" class="px-2 py-1 cursor-pointer rounded-md text-center bg-blue-500">পূর্ব হিসাব</a>
                         </td>
                     </tr>
@@ -70,7 +78,7 @@
                         <td>মোঃ আব্দুল্লাহ</td>
                         <td>২০১৮৭০ টাকা</td>
                         <td>
-                            <a href="moneyStore.html" class="px-2 py-1 cursor-pointer rounded-md text-center bg-green-500">জমা</a>
+                            <button data-value="forn5" class="px-2 py-1 cursor-pointer rounded-md text-center bg-green-500">জমা</button>
                             <a href="transaction.html" class="px-2 py-1 cursor-pointer rounded-md text-center bg-blue-500">পূর্ব হিসাব</a>
                         </td>
                     </tr>
@@ -79,7 +87,7 @@
                         <td>মোঃ আব্দুল্লাহ</td>
                         <td>২০১৮৭০ টাকা</td>
                         <td>
-                            <a href="moneyStore.html" class="px-2 py-1 cursor-pointer rounded-md text-center bg-green-500">জমা</a>
+                            <button data-value="form6" class="px-2 py-1 cursor-pointer rounded-md text-center bg-green-500">জমা</button>
                             <a href="transaction.html" class="px-2 py-1 cursor-pointer rounded-md text-center bg-blue-500">পূর্ব হিসাব</a>
                         </td>
                     </tr>
@@ -87,7 +95,35 @@
             </table>
             
         </div>
+        <div class="store-form rounded-md hidden p-4">
+            <form action="" class="p-4 w-full bg-white rounded-md relative">
+                <i class="absolute top-0 right-0 fa-solid fa-xmark cursor-pointer text-2xl p-4"></i>
+                <h3 class="w-60 p-3 bg-yellow-500 rounded-md text-center text-white mx-auto">জমা</h3>
+                <div class="flex items-center text-lg justify-center my-4 flex-wrap">
+                    <div class="m-2">
+                        <label for="">নামঃ </label>
+                        <input type="text" value="আবু হানিফ" name="" id="" class="p-3 text-lg border-2 border-yellow-500 rounded-md">
+                    </div>
+                    <div class="m-2">
+                        <label for="">জমাঃ </label>
+                        <input type="number" value="২০০০০০" name="" id="" class="p-3 text-lg border-2 border-yellow-500 rounded-md">
+                    </div>
+                </div>
+                <div class="flex items-center justify-center my-4 flex-wrap">
+                    <div class="m-2">
+                        <label for="">নগদ গ্রহণঃ </label>
+                        <input type="number" value="১৫০০০০" name="" id="" class="p-3 text-lg border-2 border-yellow-500 rounded-md">
+                    </div>
+                    <div class="m-2">
+                        <label for="">বাকী/জমাঃ </label>
+                        <input type="number" value="৫০০০০" name="" id="" class="p-3 text-lg border-2 border-yellow-500 rounded-md">
+                    </div>
+                </div>
+                <input type="submit" value="Save & Print" class="w-60 block p-3 mx-auto cursor-pointer bg-yellow-500 text-white rounded md">
+            </form>
+        </div>
     </section>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

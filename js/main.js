@@ -1,5 +1,11 @@
-$(document).ready(function() {
-    let id = 1
+// $(function() {
+//     var ids = [110, 111, 112, 113, 114, 115, 116, 117, 118]
+//     $('#Id').autocomplete({
+//         source:ids,
+//         minLength: 2
+//     })
+// })
+$(document).ready(function(e) {
     $(':disabled').addClass('border-red-500')
     function toggleEnable(before, after) {
         if($(`#${before}`).val()) {
@@ -7,6 +13,11 @@ $(document).ready(function() {
         } else {
             $(`#${after}`).attr('disabled', true).addClass('border-red-500').removeClass('border-yellow-500')
         }
+    }
+    function getPrice() {
+        let amount = $('#amount').val()
+        let retail = $('#retail').val() || 0
+        $('#price').val(amount * retail)
     }
     $('#product').keyup(function() {
         toggleEnable('product', 'amount')
@@ -17,22 +28,6 @@ $(document).ready(function() {
     $('#retail').keyup(function() {
         toggleEnable('retail', 'price')
     })
-    // $('.fa-plus').click(() => {
-    //     let table = ""
-    //     let product = $('#product').val()
-    //     let amount = $('#amount').val()
-    //     let retail = $('#retail').val()
-    //     let price = $('#price').val()
-    //     let unit = $('#unit').val() ? $('#unit').val() : "Kg"
-    //     let tr = `<tr class="">
-    //         <td>${id}</td><td>${product}</td><td>${amount}${unit}</td><td>${retail}</td>
-    //         <td>${price}</td><td><i data-value="${price}" id="getPrice" class="fa-solid fa-check cursor-pointer border-2 border-green-300 p-1 text-green-300"></i></td>
-    //     </tr>`
-    //     $('#product').val(null);$('#amount').val(null);$('#retail').val(null);$('#price').val(null)
-    //     toggleEnable('product', 'amount');toggleEnable('amount', 'retail');toggleEnable('retail', 'price')
-    //     $('#product_list tbody').append(tr)
-    //     id++
-    // })
     $('#check').click(function() {
         if($(this).is(':checked')) {
             $('#discount').removeAttr('disabled').addClass('border-yellow-500').removeClass('border-red-500')
@@ -40,7 +35,41 @@ $(document).ready(function() {
             $('#discount').attr('disabled', true).addClass('border-red-500').removeClass('border-yellow-500')
         }
     })
+    $('#check1').click(function() {
+        if($(this).is(':checked')) {
+            $('#jer').removeAttr('disabled').addClass('border-yellow-500').removeClass('border-red-500')
+        } else  {
+            $('#jer').attr('disabled', true).addClass('border-red-500').removeClass('border-yellow-500')
+        }
+    })
     $('#getPrice').click(function() {
         console.log("Hello")
     })
+    $('#retail').keyup(function() {
+        getPrice()
+    })
+    $('#amount').keyup(function() {
+        getPrice()
+    })
+    $('#product_list td').dblclick(function() {
+        let id = $(this).data('value')
+        $(this).attr('id', id)
+        $(this).html(`<input type="number" id='x' class="w-12 text-black">`)
+        console.log($(`#x`).val())
+        $(`#x`).keyup(function(e) {
+            if(e.key === "Enter") {
+                $(`#${id}`).text($(`#x`).val())
+            }
+        })
+    })
+    $('.customer_table td button').click(function() {
+        let id = $(this).data('value')
+        console.log(id)
+        $('.store-form').attr('id', id)
+        $(`#${id}`).toggle(400)
+    })
+    $('.fa-xmark').click(function() {
+        $('.store-form').hide(400)
+    })
+   
 })

@@ -14,6 +14,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header class="flex items-center justify-between p-4 bg-green-500">
+        <div class="text-2xl text-white">Logo</div>
+        <ul class="flex items-center justify-center text-white">
+            <li><a class="mr-4 text-lg" href="/">Home</a></li>
+            <li><a class="mr-4 text-lg" href="strore.html">Storage</a></li>
+            <li><a class="mr-4 text-lg" href="customer.html">Customer</a></li>
+        </ul>
+    </header>
     <section class="flex items-center justify-center md:p-4 w-full flex-wrap form-container">
         <!-- <div class="md:w-6/12 mr-1">
             <img src="images/healthy-vegetables-grocery-store-lots-small-35578407.jpg" alt="">
@@ -21,8 +29,8 @@
         <form style="font-family: 'SiyamRupali', sans-serif;" class="p-4 text-white" action="">
             <p class="text-lg">ক্রেতাঃ (ফর্দা নং - 220613001)</p>
             <div class="flex items-center flex-wrap my-4">
-                <label class="text-lg" for="id">ID: </label>
-                <input class="text-lg mx-2 px-2 outline-none border-b-2 border-yellow-500 bg-grey" type="text" name="id" id="id">
+                <label class="text-lg" for="Id">ID: </label>
+                <input class="text-lg mx-2 px-2 outline-none border-b-2 border-yellow-500 bg-grey" type="text" name="id" id="Id">
                 <label class="text-lg" for="id">নাম: </label>
                 <input class="text-lg mx-2 px-2 outline-none border-b-2 border-yellow-500 bg-grey" type="text" name="id" id="id">
             </div>
@@ -74,7 +82,7 @@
             </table>
         </div>
         <p style="font-family: 'SiyamRupali', sans-serif;" class="p-4 text-lg mt-8">পণ্যের তালিকাঃ</p><hr class="border-yellow-500">
-        <div style="font-family: 'SiyamRupali', sans-serif;" class="responsive px-4 scrollable">
+        <div style="font-family: 'SiyamRupali', sans-serif;" class="responsive px-4">
             <table id="product_list" class="w-full text-center text-white text-lg">
                 <thead>
                     <tr class="p-4 text-white">
@@ -83,7 +91,7 @@
                         <th>পরিমান</th>
                         <th>দর</th>
                         <th>মূল্যমান</th>
-                        <th>পেমেন্ট</th>
+                        <th>বাদ</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -91,60 +99,61 @@
                         <td>1</td>
                         <td>dfdgdgdg</td>
                         <td>10</td>
-                        <td>20</td>
+                        <td data-value="retail1">20</td>
                         <td>30</td>
-                        <td><i class="fa-solid fa-check cursor-pointer border-2 border-green-300 p-1 text-green-300"></i></td>
+                        <td><i class="fa-solid fa-xmark cursor-pointer border-2 border-green-300 p-1 text-green-300"></i></td>
                     </tr>
                     <tr class="p-4">
                         <td>2</td>
                         <td>fgfdgfdg</td>
                         <td>20</td>
-                        <td>40</td>
+                        <td data-value="retail2">40</td>
                         <td>60</td>
-                        <td><i class="fa-solid fa-check cursor-pointer border-2 border-green-300 p-1 text-green-300"></i></td>
+                        <td><i class="fa-solid fa-xmark cursor-pointer border-2 border-green-300 p-1 text-green-300"></i></td>
                     </tr>
                     <tr class="p-4">
                         <td>3</td>
                         <td>sdefs</td>
                         <td>30</td>
-                        <td>40</td>
+                        <td data-value="retail3">40</td>
                         <td>50</td>
-                        <td><i class="fa-solid fa-check cursor-pointer border-2 border-green-300 p-1 text-green-300"></i></td>
+                        <td><i class="fa-solid fa-xmark cursor-pointer border-2 border-green-300 p-1 text-green-300"></i></td>
                     </tr>
                     <tr class="p-4">
                         <td>4</td>
                         <td>gtfgtrt</td>
                         <td>50</td>
-                        <td>60</td>
+                        <td data-value="retail4">60</td>
                         <td>40</td>
-                        <td><i class="fa-solid fa-check cursor-pointer border-2 border-green-300 p-1 text-green-300"></i></td>
+                        <td><i class="fa-solid fa-xmark cursor-pointer border-2 border-green-300 p-1 text-green-300"></i></td>
                     </tr>
                     <tr class="p-4">
                         <td>5</td>
                         <td>er erefeft</td>
                         <td>70</td>
-                        <td>দর</td>
+                        <td data-value="retail5">দর</td>
                         <td>80</td>
-                        <td><i class="fa-solid fa-check cursor-pointer border-2 border-green-300 p-1 text-green-300"></i></td>
+                        <td><i class="fa-solid fa-xmark cursor-pointer border-2 border-green-300 p-1 text-green-300"></i></td>
                     </tr>
                     <tr class="p-4">
                         <td>6</td>
                         <td>gfgfdgfg</td>
                         <td>80</td>
-                        <td>50</td>
+                        <td data-value="retail6">50</td>
                         <td>60</td>
-                        <td><i class="fa-solid fa-check cursor-pointer border-2 border-green-300 p-1 text-green-300"></i></td>
+                        <td><i class="fa-solid fa-xmark cursor-pointer border-2 border-green-300 p-1 text-green-300"></i></td>
                     </tr>
                     <tr class="p-4">
                         <td>7</td>
                         <td>dgrfgrtfg</td>
                         <td>80</td>
-                        <td>90</td>
+                        <td data-value="retail7">90</td>
                         <td>100</td>
-                        <td><i class="fa-solid fa-check cursor-pointer border-2 border-green-300 p-1 text-green-300"></i></td>
+                        <td><i class="fa-solid fa-xmark cursor-pointer border-2 border-green-300 p-1 text-green-300"></i></td>
                     </tr>
                 </tbody>
             </table>
+            <button class="bg-yellow-500 p-2 text-center text-white text-lg w-24 rounded-md mt-2">Print</button>
         </div>
         <p style="font-family: 'SiyamRupali', sans-serif;" class="p-4 text-lg mt-8">পেমেন্টঃ</p><hr class="border-yellow-500">
         <form style="font-family: 'SiyamRupali', sans-serif;" action="" class="w-5/6 mx-auto p-4 my-8 border-2 border-yellow-500">
@@ -154,9 +163,14 @@
                     <input class=" rounded-lg outline-none border-2 border-yellow-500 text-lg p-3" type="number" name="" id="">
                 </div>
                 <div class="my-3">
-                    <input class="" value="" type="checkbox" name="" id="check"> ছাড়ের জন্য ঠিকমার্ক দিন
+                    <input class="" value="" type="checkbox" name="" id="check"> ছাড়ের জন্য টিকমার্ক দিন
                     <label class="block" for="">ছাড়ের পরিমাণ = </label>
                     <input disabled id="discount" class="rounded-lg outline-none border-2 border-yellow-500 text-lg p-3" type="number" name="" id="">
+                </div>
+                <div class="my-3">
+                    <input class="" value="" type="checkbox" name="" id="check1">জেরের জন্য টিকমার্ক দিন
+                    <label class="block" for="">জের = </label>
+                    <input disabled id="jer" class="rounded-lg outline-none border-2 border-yellow-500 text-lg p-3" type="number" name="" id="">
                 </div>
             </div>
             <div class="flex items-center my-4 justify-evenly flex-wrap">
@@ -172,6 +186,9 @@
             <input class="w-full outline-2 hover:outline-yellow-500 p-3 rounded-lg bg-yellow-600 cursor-pointer text-white" type="submit" value="Print & Save">
         </form>
     </section>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/main.js"></script>
 </body>

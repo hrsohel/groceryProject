@@ -14,8 +14,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header class="flex items-center justify-between p-4 bg-green-500">
+        <div class="text-2xl text-white">Logo</div>
+        <ul class="flex items-center justify-center text-white">
+            <li><a class="mr-4 text-lg" href="/">Home</a></li>
+            <li><a class="mr-4 text-lg" href="strore.html">Storage</a></li>
+            <li><a class="mr-4 text-lg" href="customer.html">Customer</a></li>
+        </ul>
+    </header>
     <section class="p-4 storage">
-        <h1 class="w-72 mx-auto my-3 py-2 text-center text-lg text-white bg-yellow-500">Storage</h1>
+        <h1 class="w-72 rounded-md mx-auto my-3 py-2 text-center text-lg text-white bg-yellow-500">Storage</h1>
         <form action="">
             <!-- <label class="text-lg block" for="">Show By</label> -->
             <!-- <select class="text-lg ml-2 outline-none border-yellow-500 border-2" name="" id="">
@@ -23,7 +31,8 @@
                 <option value="পণ্যনুসারে">পণ্যনুসারে</option>
                 <option value="স্টোর অনুসারে">স্টোর অনুসারে</option>
             </select> -->
-            <input type="search" name="" id=""class="my-2 rounded-lg text-lg ml-2 p-2 text-lg outline-none border-yellow-500 border-2" placeholder="Search By Any Feild">
+            <h3 class="font-bold pl-2">Search By Products And Storage</h3>
+            <input type="search" name="" id=""class="my-2 rounded-lg text-lg ml-2 p-2 text-lg outline-none border-yellow-500 border-2" placeholder="Search">
             <input type="submit" value="Search" class="outline-none bg-yellow-600 text-white text-lg rounded-sm cursor-pointer p-2 text-center ">
         </form>
         <div class="responsive">
