@@ -51,10 +51,11 @@ $(document).ready(function(e) {
     $('#amount').keyup(function() {
         getPrice()
     })
-    $('#product_list td').dblclick(function() {
+    $('.editable').dblclick(function() {
         let id = $(this).data('value')
+        let _id = `x${Math.random()}`
         $(this).attr('id', id)
-        $(this).html(`<input type="number" id='x' class="w-12 text-black">`)
+        $(this).html(`<input type="number" id="x" class="w-12 text-black">`)
         console.log($(`#x`).val())
         $(`#x`).keyup(function(e) {
             if(e.key === "Enter") {
@@ -70,6 +71,21 @@ $(document).ready(function(e) {
     })
     $('.fa-xmark').click(function() {
         $('.store-form').hide(400)
+        $('.prevForm').hide(400)
+        $('.storeForm').hide(400)
     })
-   
+   $('.fa-bars').click(function() {
+       $(this).toggleClass('fa-xmark')
+       $('header ul').toggleClass('show')
+   })
+   $('.previous').click(function() {
+       let id = $(this).data('value')
+       $('.prevForm').attr('id', id)
+       $(`#${id}`).toggle(400)
+   })
+   $('.store-change').click(function() {
+       let id = $(this).data('value')
+       $('.storeForm').attr('id', id)
+       $(`#${id}`).toggle(400)
+   })
 })

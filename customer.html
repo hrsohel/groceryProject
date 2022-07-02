@@ -14,15 +14,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="flex items-center justify-between p-4 bg-green-500">
+    <header class="relative flex items-center justify-between p-4 bg-green-500">
         <div class="text-2xl text-white">Logo</div>
-        <ul class="flex items-center justify-center text-white">
-            <li><a class="mr-4 text-lg" href="/">Home</a></li>
-            <li><a class="mr-4 text-lg" href="strore.html">Storage</a></li>
-            <li><a class="mr-4 text-lg" href="customer.html">Customer</a></li>
+        <ul class=" flex items-center justify-center text-white bg-green-500">
+            <li><a class="mr-8 text-lg" href="index.html">Home</a></li>
+            <li><a class="mr-8 text-lg" href="strore.html">Storage</a></li>
+            <li><a class="mr-8 text-lg" href="customer.html">Customer</a></li>
+            <li><a class="mr-8 text-lg" href="customerReg.html">Customer Registration</a></li>
+            <li><a class="mr-8 text-lg" href="productDashboard.html">Product Dashboard</a></li>
         </ul>
+        <i class="block md:hidden fa-solid fa-bars rounded-md cursor-pointer border-2 border-white p-2 text-white"></i>
     </header>
-    <section class="customer p-4">
+    <section class="customer md:p-4">
         <h1 class="w-72 rounded-md mx-auto my-3 py-2 text-center text-lg text-white bg-yellow-500">Customer</h1>
         <form action="">
             <!-- <label class="text-lg block" for="">Show By</label> -->
@@ -31,11 +34,11 @@
                 <option value="পণ্যনুসারে">পণ্যনুসারে</option>
                 <option value="স্টোর অনুসারে">স্টোর অনুসারে</option>
             </select> -->
-            <input type="search" name="" id=""class="my-2 rounded-lg text-lg ml-2 p-2 text-lg outline-none border-yellow-500 border-2" placeholder="Search Customer">
-            <input type="submit" value="Search" class="outline-none bg-yellow-600 text-white text-lg rounded-sm cursor-pointer p-2 text-center ">
+            <input type="search" name="" id=""class="my-2 rounded-lg text-xs md:text-lg ml-2 p-2 outline-none border-yellow-500 border-2" placeholder="Search Customer">
+            <input type="submit" value="Search" class="outline-none bg-yellow-600 text-white text-xs md:text-lg rounded-sm cursor-pointer p-2 text-center ">
         </form>
         <div class="responsive">
-            <table class="customer_table w-full text-white text-center text-lg">
+            <table class="customer_table w-full text-white text-center text-xs md:text:md lg:text-lg">
                 <tbody>
                     <tr>
                         <td>০১</td>
@@ -101,11 +104,15 @@
                 <h3 class="w-60 p-3 bg-yellow-500 rounded-md text-center text-white mx-auto">জমা</h3>
                 <div class="flex items-center text-lg justify-center my-4 flex-wrap">
                     <div class="m-2">
+                        <label for="">ফর্দ নাম্বারঃ </label>
+                        <input type="text" value="" name="" id="" class="p-3 text-lg border-2 border-yellow-500 rounded-md">
+                    </div>
+                    <div class="m-2">
                         <label for="">নামঃ </label>
                         <input type="text" value="আবু হানিফ" name="" id="" class="p-3 text-lg border-2 border-yellow-500 rounded-md">
                     </div>
                     <div class="m-2">
-                        <label for="">জমাঃ </label>
+                        <label for="">পূর্বের জেরঃ </label>
                         <input type="number" value="২০০০০০" name="" id="" class="p-3 text-lg border-2 border-yellow-500 rounded-md">
                     </div>
                 </div>
@@ -115,7 +122,7 @@
                         <input type="number" value="১৫০০০০" name="" id="" class="p-3 text-lg border-2 border-yellow-500 rounded-md">
                     </div>
                     <div class="m-2">
-                        <label for="">বাকী/জমাঃ </label>
+                        <label for="">বাকী/জেরঃ </label>
                         <input type="number" value="৫০০০০" name="" id="" class="p-3 text-lg border-2 border-yellow-500 rounded-md">
                     </div>
                 </div>

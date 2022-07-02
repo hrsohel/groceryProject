@@ -14,13 +14,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="flex items-center justify-between p-4 bg-green-500">
+    <header class="relative flex items-center justify-between p-4 bg-green-500">
         <div class="text-2xl text-white">Logo</div>
-        <ul class="flex items-center justify-center text-white">
-            <li><a class="mr-4 text-lg" href="/">Home</a></li>
-            <li><a class="mr-4 text-lg" href="strore.html">Storage</a></li>
-            <li><a class="mr-4 text-lg" href="customer.html">Customer</a></li>
+        <ul class=" flex items-center justify-center text-white bg-green-500">
+            <li><a class="mr-8 text-lg" href="index.html">Home</a></li>
+            <li><a class="mr-8 text-lg" href="strore.html">Storage</a></li>
+            <li><a class="mr-8 text-lg" href="customer.html">Customer</a></li>
+            <li><a class="mr-8 text-lg" href="customerReg.html">Customer Registration</a></li>
+            <li><a class="mr-8 text-lg" href="productDashboard.html">Product Dashboard</a></li>
         </ul>
+        <i class="block md:hidden fa-solid fa-bars rounded-md cursor-pointer border-2 border-white p-2 text-white"></i>
     </header>
     <section class="flex items-center justify-center md:p-4 w-full flex-wrap form-container">
         <!-- <div class="md:w-6/12 mr-1">
@@ -84,74 +87,96 @@
             </table>
         </div>
         <p style="font-family: 'SiyamRupali', sans-serif;" class="p-4 text-lg mt-8">পণ্যের তালিকাঃ</p><hr class="border-yellow-500">
-        <div style="font-family: 'SiyamRupali', sans-serif;" class="responsive px-4">
-            <table id="product_list" class="w-full text-center text-white text-lg">
+        <div style="font-family: 'SiyamRupali', sans-serif;" class="responsive md:px-4">
+            <table id="product_list" class="w-full text-center text-white text-xs md:text:md lg:text-lg">
                 <thead>
-                    <tr class="p-4 text-white">
-                        <th>ক্রমিক নং</th>
-                        <th>মালের/পণ্যের নাম</th>
-                        <th>পরিমান</th>
-                        <th>দর</th>
-                        <th>মূল্যমান</th>
-                        <th>বাদ</th>
+                    <tr class="md:p-4 text-white">
+                        <th class="p-2">ক্রমিক নং</th>
+                        <th class="p-2">মালের/পণ্যের নাম</th>
+                        <th class="p-2">পরিমান</th>
+                        <th class="p-2 w-8">দর</th>
+                        <th class="p-2">মূল্যমান</th>
+                        <th class="p-2">এডিট/বাদ</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="p-4">
+                    <tr class="md:p-4">
                         <td>1</td>
                         <td>dfdgdgdg</td>
                         <td>10</td>
-                        <td data-value="retail1">20</td>
+                        <td class="editable" data-value="retail1">20</td>
                         <td>30</td>
-                        <td><i class="fa-solid fa-xmark cursor-pointer border-2 border-green-300 p-1 text-green-300"></i></td>
+                        <td>
+                            <i class="fa-solid fa-pen-to-square cursor-pointer border-2 border-green-300 p-1 text-green-300"></i>
+                            <i class="fa-solid fa-xmark cursor-pointer border-2 border-green-300 p-1 text-green-300"></i>
+                        </td>
+                        
                     </tr>
-                    <tr class="p-4">
+                    <tr class="md:p-4">
                         <td>2</td>
                         <td>fgfdgfdg</td>
                         <td>20</td>
-                        <td data-value="retail2">40</td>
+                        <td class="editable" data-value="retail2">40</td>
                         <td>60</td>
-                        <td><i class="fa-solid fa-xmark cursor-pointer border-2 border-green-300 p-1 text-green-300"></i></td>
+                        <td>
+                            <i class="fa-solid fa-pen-to-square cursor-pointer border-2 border-green-300 p-1 text-green-300"></i>
+                            <i class="fa-solid fa-xmark cursor-pointer border-2 border-green-300 p-1 text-green-300"></i>
+                        </td>                    
                     </tr>
-                    <tr class="p-4">
+                    <tr class="md:p-4">
                         <td>3</td>
                         <td>sdefs</td>
                         <td>30</td>
-                        <td data-value="retail3">40</td>
+                        <td class="editable" data-value="retail3">40</td>
                         <td>50</td>
-                        <td><i class="fa-solid fa-xmark cursor-pointer border-2 border-green-300 p-1 text-green-300"></i></td>
+                        <td>
+                            <i class="fa-solid fa-pen-to-square cursor-pointer border-2 border-green-300 p-1 text-green-300"></i>
+                            <i class="fa-solid fa-xmark cursor-pointer border-2 border-green-300 p-1 text-green-300"></i>
+                        </td>                    
                     </tr>
-                    <tr class="p-4">
+                    <tr class="md:p-4">
                         <td>4</td>
                         <td>gtfgtrt</td>
                         <td>50</td>
-                        <td data-value="retail4">60</td>
+                        <td class="editable" data-value="retail4">60</td>
                         <td>40</td>
-                        <td><i class="fa-solid fa-xmark cursor-pointer border-2 border-green-300 p-1 text-green-300"></i></td>
+                        <td>
+                            <i class="fa-solid fa-pen-to-square cursor-pointer border-2 border-green-300 p-1 text-green-300"></i>
+                            <i class="fa-solid fa-xmark cursor-pointer border-2 border-green-300 p-1 text-green-300"></i>
+                        </td>                    
                     </tr>
-                    <tr class="p-4">
+                    <tr class="md:p-4">
                         <td>5</td>
                         <td>er erefeft</td>
                         <td>70</td>
-                        <td data-value="retail5">দর</td>
+                        <td class="editable" data-value="retail5">দর</td>
                         <td>80</td>
-                        <td><i class="fa-solid fa-xmark cursor-pointer border-2 border-green-300 p-1 text-green-300"></i></td>
+                        <td>
+                            <i class="fa-solid fa-pen-to-square cursor-pointer border-2 border-green-300 p-1 text-green-300"></i>
+                            <i class="fa-solid fa-xmark cursor-pointer border-2 border-green-300 p-1 text-green-300"></i>
+                        </td>                    
                     </tr>
-                    <tr class="p-4">
+                    <tr class="md:p-4">
                         <td>6</td>
                         <td>gfgfdgfg</td>
                         <td>80</td>
-                        <td data-value="retail6">50</td>
+                        <td class="editable" data-value="retail6">50</td>
                         <td>60</td>
-                        <td><i class="fa-solid fa-xmark cursor-pointer border-2 border-green-300 p-1 text-green-300"></i></td>
+                        <td>
+                            <i class="fa-solid fa-pen-to-square cursor-pointer border-2 border-green-300 p-1 text-green-300"></i>
+                            <i class="fa-solid fa-xmark cursor-pointer border-2 border-green-300 p-1 text-green-300"></i>
+                        </td>                    
                     </tr>
-                    <tr class="p-4">
+                    <tr class="md:p-4">
                         <td>7</td>
                         <td>dgrfgrtfg</td>
                         <td>80</td>
-                        <td data-value="retail7">90</td>
+                        <td class="editable" data-value="retail7">90</td>
                         <td>100</td>
-                        <td><i class="fa-solid fa-xmark cursor-pointer border-2 border-green-300 p-1 text-green-300"></i></td>
+                        <td>
+                            <i class="fa-solid fa-pen-to-square cursor-pointer border-2 border-green-300 p-1 text-green-300"></i>
+                            <i class="fa-solid fa-xmark cursor-pointer border-2 border-green-300 p-1 text-green-300"></i>
+                        </td>                    
                     </tr>
                 </tbody>
             </table>

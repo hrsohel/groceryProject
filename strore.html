@@ -14,13 +14,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="flex items-center justify-between p-4 bg-green-500">
+    <header class="relative flex items-center justify-between p-4 bg-green-500">
         <div class="text-2xl text-white">Logo</div>
-        <ul class="flex items-center justify-center text-white">
-            <li><a class="mr-4 text-lg" href="/">Home</a></li>
-            <li><a class="mr-4 text-lg" href="strore.html">Storage</a></li>
-            <li><a class="mr-4 text-lg" href="customer.html">Customer</a></li>
+        <ul class=" flex items-center justify-center text-white bg-green-500">
+            <li><a class="mr-8 text-lg" href="index.html">Home</a></li>
+            <li><a class="mr-8 text-lg" href="strore.html">Storage</a></li>
+            <li><a class="mr-8 text-lg" href="customer.html">Customer</a></li>
+            <li><a class="mr-8 text-lg" href="customerReg.html">Customer Registration</a></li>
+            <li><a class="mr-8 text-lg" href="productDashboard.html">Product Dashboard</a></li>
         </ul>
+        <i class="block md:hidden fa-solid fa-bars rounded-md cursor-pointer border-2 border-white p-2 text-white"></i>
     </header>
     <section class="p-4 storage">
         <h1 class="w-72 rounded-md mx-auto my-3 py-2 text-center text-lg text-white bg-yellow-500">Storage</h1>
@@ -36,11 +39,130 @@
                 <option value="search by product">Search by product</option>
                 <option value="search by store">Search by store</option>
             </select><br> <br>
-            <input type="search" name="" id=""class="my-2 rounded-lg text-lg ml-2 p-2 text-lg outline-none border-yellow-500 border-2" placeholder="Search">
-            <input type="submit" value="Search" class="outline-none bg-yellow-600 text-white text-lg rounded-sm cursor-pointer p-2 text-center ">
+            <input type="search" name="" id=""class="my-2 rounded-lg text-xs md:text-lg ml-2 p-2 text-lg outline-none border-yellow-500 border-2" placeholder="Search">
+            <input type="submit" value="Search" class="outline-none bg-yellow-600 text-white text-xs md:text-lg rounded-sm cursor-pointer p-2 text-center ">
         </form>
         <div class="responsive">
-            <table class="w-full text-white text-center text-white text-lg p-4 my-4">
+            <table class="w-full text-white text-center text-white text-xs md:text:md lg:text-lg md:p-4 my-4">
+                <thead>
+                    <tr class="">
+                        <th>ক্রমিক নং</th>
+                        <th>নাম</th>
+                        <th>পরিমাণ</th>
+                        <th>স্টোর</th>
+                        <th>এ্যাকশন</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>১</td>
+                        <td>লাল চিনি</td>
+                        <td>৭০ বস্তা</td>
+                        <td>২ নং গোডাউন</td>
+                        <td>
+                            <button data-value="prev1" class="previous p-1 bg-blue-500 rounded-sm">আগত</button>
+                            <button data-value="store1" class="store-change mt-2 p-1 bg-blue-500 rounded-sm">স্টোর পরিবর্তন</button>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>২</td>
+                        <td>সাদা চিনি</td>
+                        <td>১০০ বস্তা</td>
+                        <td>৩ নং গোডাউন</td>
+                        <td>
+                            <button data-value="prev2" class="previous p-1 bg-blue-500 rounded-sm">আগত</button>
+                            <button data-value="store2" class="store-change mt-2 p-1 bg-blue-500 rounded-sm">স্টোর পরিবর্তন</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>৩</td>
+                        <td>আটা</td>
+                        <td>১০ বস্তা</td>
+                        <td>১ নং গোডাউন</td>
+                        <td>
+                            <button data-value="prev3" class="previous p-1 bg-blue-500 rounded-sm">আগত</button>
+                            <button data-value="store3" class="store-change mt-2 p-1 bg-blue-500 rounded-sm">স্টোর পরিবর্তন</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>৪</td>
+                        <td>আটা</td>
+                        <td>১০ বস্তা</td>
+                        <td>১ নং গোডাউন</td>
+                        <td>
+                            <button data-value="prev4" class="previous p-1 bg-blue-500 rounded-sm">আগত</button>
+                            <button data-value="store4" class="store-change mt-2 p-1 bg-blue-500 rounded-sm">স্টোর পরিবর্তন</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>৫</td>
+                        <td>লাল চিনি</td>
+                        <td>৫০ বস্তা</td>
+                        <td>১ নং গোডাউন</td>
+                        <td>
+                            <button data-value="prev5" class="previous p-1 bg-blue-500 rounded-sm">আগত</button>
+                            <button data-value="store5" class="store-change mt-2 p-1 bg-blue-500 rounded-sm">স্টোর পরিবর্তন</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>৬</td>
+                        <td>লাল চিনি</td>
+                        <td>৫ বস্তা</td>
+                        <td>৩ নং গোডাউন</td>
+                        <td>
+                            <button data-value="prev6" class="previous p-1 bg-blue-500 rounded-sm">আগত</button>
+                            <button data-value="store6" class="store-change mt-2 p-1 bg-blue-500 rounded-sm">স্টোর পরিবর্তন</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>৭</td>
+                        <td>সাদা চিনি</td>
+                        <td>১০ বস্তা</td>
+                        <td>১ নং গোডাউন</td>
+                        <td>
+                            <button data-value="prev7" class="previous p-1 bg-blue-500 rounded-sm">আগত</button>
+                            <button data-value="store7" class="store-change mt-2 p-1 bg-blue-500 rounded-sm">স্টোর পরিবর্তন</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>৮</td>
+                        <td>সোয়াবিন</td>
+                        <td>২ ড্রাম</td>
+                        <td>২ নং গোডাউন</td>
+                        <td>
+                            <button data-value="prev8" class="previous p-1 bg-blue-500 rounded-sm">আগত</button>
+                            <button data-value="store8" class="store-change mt-2 p-1 bg-blue-500 rounded-sm">স্টোর পরিবর্তন</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>৮</td>
+                        <td>পাম অয়েল</td>
+                        <td>৩ ড্রাম</td>
+                        <td>১ নং গোডাউন</td>
+                        <td>
+                            <button data-value="prev9" class="previous p-1 bg-blue-500 rounded-sm">আগত</button>
+                            <button data-value="store9" class="store-change mt-2 p-1 bg-blue-500 rounded-sm">স্টোর পরিবর্তন</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>৭</td>
+                        <td>লাইফবয় গোল্ড</td>
+                        <td>৪ কার্টুন</td>
+                        <td>৩ নং গোডাউন</td>
+                        <td>
+                            <button data-value="prev10" class="previous p-1 bg-blue-500 rounded-sm">আগত</button>
+                            <button data-value="store10" class="store-change mt-2 p-1 bg-blue-500 rounded-sm">স্টোর পরিবর্তন</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="responsive">
+            <h3 class="font-bold text-white py-2 mb-1 text-lg text-center bg-yellow-500">
+                জরুরি পণ্য
+            </h3>
+            <table class="w-full text-xs md:text:md lg:text-lg text-white text-center">
                 <thead>
                     <tr class="">
                         <th>ক্রমিক নং</th>
@@ -68,51 +190,42 @@
                         <td>১০ বস্তা</td>
                         <td>১ নং গোডাউন</td>
                     </tr>
-                    <tr>
-                        <td>৪</td>
-                        <td>আটা</td>
-                        <td>১০ বস্তা</td>
-                        <td>১ নং গোডাউন</td>
-                    </tr>
-                    <tr>
-                        <td>৫</td>
-                        <td>লাল চিনি</td>
-                        <td>৫০ বস্তা</td>
-                        <td>১ নং গোডাউন</td>
-                    </tr>
-                    <tr>
-                        <td>৬</td>
-                        <td>লাল চিনি</td>
-                        <td>৫ বস্তা</td>
-                        <td>৩ নং গোডাউন</td>
-                    </tr>
-                    <tr>
-                        <td>৭</td>
-                        <td>সাদা চিনি</td>
-                        <td>১০ বস্তা</td>
-                        <td>১ নং গোডাউন</td>
-                    </tr>
-                    <tr>
-                        <td>৮</td>
-                        <td>সোয়াবিন</td>
-                        <td>২ ড্রাম</td>
-                        <td>২ নং গোডাউন</td>
-                    </tr>
-                    <tr>
-                        <td>৮</td>
-                        <td>পাম অয়েল</td>
-                        <td>৩ ড্রাম</td>
-                        <td>১ নং গোডাউন</td>
-                    </tr>
-                    <tr>
-                        <td>৭</td>
-                        <td>লাইফবয় গোল্ড</td>
-                        <td>৪ কার্টুন</td>
-                        <td>৩ নং গোডাউন</td>
-                    </tr>
                 </tbody>
             </table>
         </div>
+        <form action="" class="prevForm hidden p-4 shadow-2xl rounded-lg w-72">
+            
+            <div class="mx-auto relative">
+                <i class="fa-solid fa-xmark cursor-pointer text-lg font-bold absolute top-0 right-0"></i>
+                <label for="" class="block text-lg">মালের নাম</label>
+                <input type="text" name="" id="" class="w-full rounded-md my-2 mx-auto p-2 text-lg outline-none border-2 border-yellow-500">
+                <label for="" class="block text-lg">পরিমাণ</label>
+                <input type="number" name="" id="" class="w-full rounded-md my-2 mx-auto p-2 text-lg outline-none border-2 border-yellow-500">
+                <label for="" class="block text-lg">গন্তব্য</label>
+                <input type="text" name="" id="" class="w-full rounded-md my-2 mx-auto p-2 text-lg outline-none border-2 border-yellow-500">
+                <input class="rounded-md my-2 mx-auto p-2 text-lg bg-yellow-500 text-white w-full" type="submit" value="Print">
+            </div>
+        </form>
+        <form action="" class="storeForm hidden p-4 shadow-2xl rounded-lg w-72">
+            
+            <div class="mx-auto relative">
+                <i class="fa-solid fa-xmark cursor-pointer text-lg font-bold absolute top-0 right-0"></i>
+                <label for="" class="block text-lg">মালের নাম</label>
+                <input type="text" name="" id="" class="w-full rounded-md my-2 mx-auto p-2 text-lg outline-none border-2 border-yellow-500">
+                <label for="" class="block text-lg">পরিমাণ</label>
+                <input type="number" name="" id="" class="w-full rounded-md my-2 mx-auto p-2 text-lg outline-none border-2 border-yellow-500">
+                <label for="" class="block text-lg">উৎস</label>
+                <input type="text" name="" id="" class="w-full rounded-md my-2 mx-auto p-2 text-lg outline-none border-2 border-yellow-500">
+                <label for="" class="block text-lg">গন্তব্য</label>
+                <input type="text" name="" id="" class="w-full rounded-md my-2 mx-auto p-2 text-lg outline-none border-2 border-yellow-500">
+                <input class="rounded-md my-2 mx-auto p-2 text-lg bg-yellow-500 text-white w-full" type="submit" value="Print">
+            </div>
+        </form>
     </section>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

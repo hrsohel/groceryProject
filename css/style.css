@@ -2,6 +2,10 @@
     font-family: 'Roboto', sans-serif;
     font-family: 'SiyamRupali', sans-serif;
 }
+header .fa-bars, header .fa-xmark {
+    transition: .5s;
+    transform: rotate(180deg);
+}
 input::-webkit-inner-spin-button,
 input::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -65,6 +69,11 @@ input[type="number"] {
     position: absolute; top: 50%; left: 50%;
     transform: translate(-50%, -50%);
 }
+.prevForm, .storeForm {
+    position: fixed; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
 .store-form form {
     margin: auto;
 }
@@ -73,18 +82,31 @@ input[type="number"] {
         width: 98% !important;
         margin: .5rem auto;
     }
-    #table, #product_list, .customer table, .transaction table {
-        min-width: 150vw;
+    header ul {
+        z-index: 10;
+        position: absolute;
+        top: -350%; left: 0;
+        width: 100%;
+        padding: 0 .5rem;
+        flex-direction: column;
+        text-align: center;
+        transition: .5s all ease-in-out;
+    }
+    header ul li {
+        margin: .5rem 0;
+    }
+    .show {
+        top: 100%;
     }
 }
 @media(max-width: 550px) {
     .form-container form input {
         width: 100% !important;
     }
-    .storage table {
+    /* .storage table {
         min-width: 200vw;
-    }
-    #table, #product_list, .customer table, .transaction table {
+    } */
+    #table {
         min-width: 250vw;
     }
     .store .container form  label {
