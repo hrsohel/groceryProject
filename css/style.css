@@ -2,8 +2,8 @@
     font-family: 'Roboto', sans-serif;
     font-family: 'SiyamRupali', sans-serif;
 }
-header .fa-bars, header .fa-xmark {
-    transition: .5s;
+.fa-xmark {
+    transition: .5s all;
     transform: rotate(180deg);
 }
 input::-webkit-inner-spin-button,
@@ -85,7 +85,7 @@ input[type="number"] {
     header ul {
         z-index: 10;
         position: absolute;
-        top: -350%; left: 0;
+        top: -450%; left: 0;
         width: 100%;
         padding: 0 .5rem;
         flex-direction: column;

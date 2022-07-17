@@ -22,8 +22,9 @@
             <li><a class="mr-8 text-lg" href="customer.html">Customer</a></li>
             <li><a class="mr-8 text-lg" href="customerReg.html">Customer Registration</a></li>
             <li><a class="mr-8 text-lg" href="productDashboard.html">Product Dashboard</a></li>
+            <li><a class="mr-8 text-lg" href="login.html">Login</a></li>
         </ul>
-        <i class="block md:hidden fa-solid fa-bars rounded-md cursor-pointer border-2 border-white p-2 text-white"></i>
+        <i class="block md:hidden fa-solid fa-bars bars rounded-md cursor-pointer border-2 border-white p-2 text-white"></i>
     </header>
     <section class="p-4 storage">
         <h1 class="w-72 rounded-md mx-auto my-3 py-2 text-center text-lg text-white bg-yellow-500">Storage</h1>
@@ -42,6 +43,7 @@
             <input type="search" name="" id=""class="my-2 rounded-lg text-xs md:text-lg ml-2 p-2 text-lg outline-none border-yellow-500 border-2" placeholder="Search">
             <input type="submit" value="Search" class="outline-none bg-yellow-600 text-white text-xs md:text-lg rounded-sm cursor-pointer p-2 text-center ">
         </form>
+        <a class="w-40 text-lg text-center text-white px-2 py-3 bg-yellow-500 block ml-auto rounded-lg" href="storeChange.html">Change Store</a>
         <div class="responsive">
             <table class="w-full text-white text-center text-white text-xs md:text:md lg:text-lg md:p-4 my-4">
                 <thead>
@@ -61,7 +63,6 @@
                         <td>২ নং গোডাউন</td>
                         <td>
                             <button data-value="prev1" class="previous p-1 bg-blue-500 rounded-sm">আগত</button>
-                            <button data-value="store1" class="store-change mt-2 p-1 bg-blue-500 rounded-sm">স্টোর পরিবর্তন</button>
                         </td>
 
                     </tr>
@@ -72,7 +73,6 @@
                         <td>৩ নং গোডাউন</td>
                         <td>
                             <button data-value="prev2" class="previous p-1 bg-blue-500 rounded-sm">আগত</button>
-                            <button data-value="store2" class="store-change mt-2 p-1 bg-blue-500 rounded-sm">স্টোর পরিবর্তন</button>
                         </td>
                     </tr>
                     <tr>
@@ -82,7 +82,6 @@
                         <td>১ নং গোডাউন</td>
                         <td>
                             <button data-value="prev3" class="previous p-1 bg-blue-500 rounded-sm">আগত</button>
-                            <button data-value="store3" class="store-change mt-2 p-1 bg-blue-500 rounded-sm">স্টোর পরিবর্তন</button>
                         </td>
                     </tr>
                     <tr>
@@ -92,7 +91,6 @@
                         <td>১ নং গোডাউন</td>
                         <td>
                             <button data-value="prev4" class="previous p-1 bg-blue-500 rounded-sm">আগত</button>
-                            <button data-value="store4" class="store-change mt-2 p-1 bg-blue-500 rounded-sm">স্টোর পরিবর্তন</button>
                         </td>
                     </tr>
                     <tr>
@@ -102,7 +100,6 @@
                         <td>১ নং গোডাউন</td>
                         <td>
                             <button data-value="prev5" class="previous p-1 bg-blue-500 rounded-sm">আগত</button>
-                            <button data-value="store5" class="store-change mt-2 p-1 bg-blue-500 rounded-sm">স্টোর পরিবর্তন</button>
                         </td>
                     </tr>
                     <tr>
@@ -112,7 +109,6 @@
                         <td>৩ নং গোডাউন</td>
                         <td>
                             <button data-value="prev6" class="previous p-1 bg-blue-500 rounded-sm">আগত</button>
-                            <button data-value="store6" class="store-change mt-2 p-1 bg-blue-500 rounded-sm">স্টোর পরিবর্তন</button>
                         </td>
                     </tr>
                     <tr>
@@ -122,7 +118,6 @@
                         <td>১ নং গোডাউন</td>
                         <td>
                             <button data-value="prev7" class="previous p-1 bg-blue-500 rounded-sm">আগত</button>
-                            <button data-value="store7" class="store-change mt-2 p-1 bg-blue-500 rounded-sm">স্টোর পরিবর্তন</button>
                         </td>
                     </tr>
                     <tr>
@@ -132,7 +127,6 @@
                         <td>২ নং গোডাউন</td>
                         <td>
                             <button data-value="prev8" class="previous p-1 bg-blue-500 rounded-sm">আগত</button>
-                            <button data-value="store8" class="store-change mt-2 p-1 bg-blue-500 rounded-sm">স্টোর পরিবর্তন</button>
                         </td>
                     </tr>
                     <tr>
@@ -142,7 +136,6 @@
                         <td>১ নং গোডাউন</td>
                         <td>
                             <button data-value="prev9" class="previous p-1 bg-blue-500 rounded-sm">আগত</button>
-                            <button data-value="store9" class="store-change mt-2 p-1 bg-blue-500 rounded-sm">স্টোর পরিবর্তন</button>
                         </td>
                     </tr>
                     <tr>
@@ -152,7 +145,6 @@
                         <td>৩ নং গোডাউন</td>
                         <td>
                             <button data-value="prev10" class="previous p-1 bg-blue-500 rounded-sm">আগত</button>
-                            <button data-value="store10" class="store-change mt-2 p-1 bg-blue-500 rounded-sm">স্টোর পরিবর্তন</button>
                         </td>
                     </tr>
                 </tbody>
@@ -197,13 +189,18 @@
             
             <div class="mx-auto relative">
                 <i class="fa-solid fa-xmark cursor-pointer text-lg font-bold absolute top-0 right-0"></i>
+                <label for="" class="block text-lg">স্লিপ নাম্বার</label>
+                <input type="number" name="" id="" class="w-full rounded-md my-2 mx-auto p-2 text-lg outline-none border-2 border-yellow-500">
                 <label for="" class="block text-lg">মালের নাম</label>
                 <input type="text" name="" id="" class="w-full rounded-md my-2 mx-auto p-2 text-lg outline-none border-2 border-yellow-500">
                 <label for="" class="block text-lg">পরিমাণ</label>
                 <input type="number" name="" id="" class="w-full rounded-md my-2 mx-auto p-2 text-lg outline-none border-2 border-yellow-500">
                 <label for="" class="block text-lg">গন্তব্য</label>
+                <input type="number" name="" id="" class="w-full rounded-md my-2 mx-auto p-2 text-lg outline-none border-2 border-yellow-500">
+                <label for="" class="block text-lg">গ্রহণকারী</label>
                 <input type="text" name="" id="" class="w-full rounded-md my-2 mx-auto p-2 text-lg outline-none border-2 border-yellow-500">
-                <input class="rounded-md my-2 mx-auto p-2 text-lg bg-yellow-500 text-white w-full" type="submit" value="Print">
+                <input class="rounded-md my-2 mx-auto p-2 text-lg bg-yellow-500 text-white w-full" type="submit" value="Details">
+                <a href="arrival.html" class="rounded-md my-2 mx-auto p-2 text-lg bg-yellow-500 text-white block text-center">Print</a>
             </div>
         </form>
         <form action="" class="storeForm hidden p-4 shadow-2xl rounded-lg w-72">

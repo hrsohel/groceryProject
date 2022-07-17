@@ -10,8 +10,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.maateen.me/siyam-rupali/font.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="relative flex items-center justify-between p-4 bg-green-500">
@@ -27,28 +27,28 @@
         <i class="block md:hidden fa-solid fa-bars bars rounded-md cursor-pointer border-2 border-white p-2 text-white"></i>
     </header>
     <section>
-        <p class="p-4 text-lg">মালের বিববনঃ </p> <hr class="border-yellow-500">
         <div class="responsive">
             <table id="table" class="w-full text-center text-lg">
-                <tr class="p-4">
-                    <!-- <th>ক্রমিক নং</th> -->
+                <!-- <tr class="p-4">
+                    <th>ক্রমিক নং</th>
                     <th>ID</th>
                     <th>নাম</th>
                     <th>ঠিকানা</th>
                     <th>মোবাইল</th>
                     <th>যোগ করুন</th>
-                </tr>
+                </tr> -->
                 <tbody class="tbody">
                     <tr class="p-4 first-row">
-                        <!-- <td>1</td> -->
-                        <td><input type="text" name="" class="w-24 border-yellow-500 bg-grey-500 border-2 outline-none focus:outline-green-500"></td>
-                        <td><input type="text" name="" class="w-24 border-yellow-500 bg-grey-500 border-2 outline-none focus:outline-green-500"></td>
-                        <td>
-                            <textarea name="" id="" class="border-yellow-500 bg-grey-500 border-2 outline-none focus:outline-green-500"></textarea>
-                            <span id="_amount"></span>
-                        </td>
-                        <td><input type="number" name="" class="w-24 border-yellow-500 bg-grey-500 border-2 outline-none focus:outline-green-500"></td>
-                        <!-- <td><input type="number" name="" id="price" disabled class="w-24 border-yellow-500 bg-grey-500 border-2 outline-none focus:outline-green-500"><span id="_price"></span></td> -->
+                        <td><input type="text" name="" class="w-24 border-yellow-500 bg-grey-500 border-2 outline-none focus:outline-green-500" placeholder="স্লিপ নাম্বার"></td>
+                        <td><input type="text" name="" class="w-24 border-yellow-500 bg-grey-500 border-2 outline-none focus:outline-green-500" placeholder="উৎস"></td>
+                        <td><input type="text" name="" class="w-48 border-yellow-500 bg-grey-500 border-2 outline-none focus:outline-green-500" placeholder="গন্তব্য"></td>
+                       
+                        <td><input type="number" name="" class="w-24 border-yellow-500 bg-grey-500 border-2 outline-none focus:outline-green-500" placeholder="গ্রহণকারী"></td>
+                        <br><div>
+                            <td><input type="text" name="" class="w-36 border-yellow-500 bg-grey-500 border-2 outline-none focus:outline-green-500" placeholder="মালের নাম"></td>
+                            <td><input type="text" name="" class="w-36 border-yellow-500 bg-grey-500 border-2 outline-none focus:outline-green-500" placeholder="পরিমাণ"></td>
+                        </div>
+                        <!-- <td><input class="bg-yellow-500 text-white rounded-md p-2 cursor-pointer" type="submit" value="Save"></td> -->
                         <td>
                             <i class="fa-solid fa-plus cursor-pointer border-2 border-blue-300 p-1 text-blue-300"></i>
                             <!-- <i class="fa-solid fa-check cursor-pointer border-2 border-green-300 p-1 text-green-300"></i> -->
@@ -59,43 +59,28 @@
         </div>
         <div class="responsive md:p-4">
             <table id="product_list" class="w-full text-center text-white text-xs md:text:md lg:text-lg">
-                <!-- <thead>
-                    <tr class="p-4 text-white">
-                        <th>ক্রমিক নং</th>
-                        <th>মালের/পণ্যের নাম</th>
-                        <th>পরিমান</th>
-                        <th>দর</th>
-                        <th>মূল্যমান</th>
-                        <th>এডিট/বাদ</th>
-                    </tr>
-                </thead> -->
+    
                 <tbody>
                     <tr class="p-4">
                         <td>1</td>
-                        <td>মোঃ আব্দুল্লাহ</td>
-                        <td>দত্তনগর</td>
-                        <td data-value="retail1">4154545415</td>
-                        <td>5200</td>
-                        
+                        <td>চাল</td>
+                        <td>২০ বস্তা</td>    
                     </tr>
                     <tr class="p-4">
                         <td>1</td>
-                        <td>মোঃ আব্দুল্লাহ</td>
-                        <td>দত্তনগর</td>
-                        <td data-value="retail1">4154545415</td>
-                        <td>5200</td>                   
+                        <td>চাল</td>
+                        <td>২০ বস্তা</td>    
                     </tr>
                     <tr class="p-4">
                         <td>1</td>
-                        <td>মোঃ আব্দুল্লাহ</td>
-                        <td>দত্তনগর</td>
-                        <td data-value="retail1">4154545415</td>
-                        <td>5200</td>                    
+                        <td>চাল</td>
+                        <td>২০ বস্তা</td>    
                     </tr>
                 </tbody>
-            </div>
+            </table>
+        </div> <br>
+        <a href="storeChangeDetails.html" class="ml-4 bg-yellow-500 text-white p-2 rounded-lg text-lg">Details</a>
     </section>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

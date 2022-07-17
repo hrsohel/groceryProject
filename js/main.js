@@ -75,7 +75,7 @@ $(document).ready(function(e) {
         $('.storeForm').hide(400)
     })
    $('.fa-bars').click(function() {
-       $(this).toggleClass('fa-xmark')
+       $(this).toggleClass('fa-xmark').css({"transition": ".5s", "transform": "180deg"})
        $('header ul').toggleClass('show')
    })
    $('.previous').click(function() {
@@ -87,5 +87,12 @@ $(document).ready(function(e) {
        let id = $(this).data('value')
        $('.storeForm').attr('id', id)
        $(`#${id}`).toggle(400)
+   })
+   $('.print-index-table').click(function() {
+       let body = $("body").html()
+       let printData = $('.print-data').html()
+       $('body').html(printData)
+       window.print()
+       $('body').html(body)
    })
 })
