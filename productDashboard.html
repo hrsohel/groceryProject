@@ -27,35 +27,153 @@
         <i class="block md:hidden fa-solid fa-bars bars rounded-md cursor-pointer border-2 border-white p-2 text-white"></i>
     </header>
     <section>
-        <div class="responsive">
-            <table id="table" class="w-full text-center text-lg">
-                <!-- <tr class="p-4">
-                    <th>ক্রমিক নং</th>
-                    <th>ID</th>
-                    <th>নাম</th>
-                    <th>ঠিকানা</th>
-                    <th>মোবাইল</th>
-                    <th>যোগ করুন</th>
-                </tr> -->
-                <tbody class="tbody">
-                    <tr class="p-4 first-row">
-                        <!-- <td>1</td> -->
-                        <td><input type="text" name="" class="w-24 border-yellow-500 bg-grey-500 border-2 outline-none focus:outline-green-500" placeholder="নাম"></td>
-                        <td><input type="text" name="" class="w-48 border-yellow-500 bg-grey-500 border-2 outline-none focus:outline-green-500" placeholder="বড় একক > ছোট একক"></td>
-                        <!-- <td>
-                            <textarea name="" id="" class="border-yellow-500 bg-grey-500 border-2 outline-none focus:outline-green-500"></textarea>
-                            <span id="_amount"></span>
-                        </td> -->
-                        <td><input type="number" name="" class="w-24 border-yellow-500 bg-grey-500 border-2 outline-none focus:outline-green-500" placeholder="খুচরা মূল্য"></td>
-                        <td><input type="text" name="" class="w-36 border-yellow-500 bg-grey-500 border-2 outline-none focus:outline-green-500" placeholder="Initial Store"></td>
-                        <td><input class="bg-yellow-500 text-white rounded-md p-2 cursor-pointer" type="submit" value="Save"></td>
-                        <td>
-                            <i class="fa-solid fa-plus cursor-pointer border-2 border-blue-300 p-1 text-blue-300"></i>
-                            <!-- <i class="fa-solid fa-check cursor-pointer border-2 border-green-300 p-1 text-green-300"></i> -->
-                        </td>
-                    </tr>
-                </tbody>   
-            </table>
+        <div class="responsive px-8">
+            <form action="" id="table" class="flex items-center justify-around my-4">
+                <input type="text" name="" class="w-24 border-2 border-yellow-500 outline-none p-2" placeholder="Name">
+                <div>
+                    <!-- for price  -->
+                    <div class="my-4 flex items-center justify-center">
+                        <input type="checkbox" name="" id="price" class="mx-2"> <label for="price">Price</label>
+                        <input type="number" name="" class="mx-2 w-24 border-2 border-yellow-500 outline-none p-2" placeholder="Price">
+                        <div class="flex items-start justify-center">
+                            <div class="mx-4 text-center">
+                                <input type="checkbox" name="" id="out1"><label for="out1">Out1</label> <br>
+                                <input type="number" name="" class="w-24 border-2 border-yellow-500 outline-none p-2" placeholder="Quantity">
+                            </div>
+                            <div class="mx-4 text-center">
+                                <input type="checkbox" name="" id="out2"><label for="out2">Out2</label> <br>
+                                <input type="number" name="" class="w-24 border-2 border-yellow-500 outline-none p-2" placeholder="Quantity">
+                            </div>
+                            <div class="mx-4 text-center">
+                                <input type="checkbox" name="" id="out3"><label for="out3">Out3</label> <br>
+                                <input type="number" name="" class="w-24 border-2 border-yellow-500 outline-none p-2" placeholder="Quantity">
+                            </div>
+                        </div>
+                        <input type="text" name="" class="w-32 border-2 border-yellow-500 outline-none p-2" placeholder="Minimum Unit">
+                    </div>
+                    <!-- for pata  -->
+                    <div class="my-4 flex items-center justify-center">
+                        <input type="checkbox" name="" id="pata" class="mx-2"> <label for="pata">Pata</label>
+                        <input type="number" name="" class="mx-2 w-24 border-2 border-yellow-500 outline-none p-2" placeholder="Price">
+                        <div class="flex items-start justify-center">
+                            <div class="mx-4 text-center">
+                                <input type="checkbox" name="" id="out4"><label for="out4">Out1</label> <br>
+                                <input type="number" name="" class="w-24 border-2 border-yellow-500 outline-none p-2" placeholder="Quantity">
+                            </div>
+                            <div class="mx-4 text-center">
+                                <input type="checkbox" name="" id="out5"><label for="out5">Out2</label> <br>
+                                <input type="number" name="" class="w-24 border-2 border-yellow-500 outline-none p-2" placeholder="Quantity">
+                            </div>
+                            <div class="mx-4 text-center">
+                                <input type="checkbox" name="" id="out6"><label for="out6">Out3</label> <br>
+                                <input type="number" name="" class="w-24 border-2 border-yellow-500 outline-none p-2" placeholder="Quantity">
+                            </div>
+                        </div>
+                        <input type="text" name="" class="w-32 border-2 border-yellow-500 outline-none p-2" placeholder="Minimum Unit">
+                    </div>
+                    <!-- for kg  -->
+                    <div class="my-4 flex items-center justify-center">
+                        <input type="checkbox" name="" id="kg" class="mx-2"> <label for="kg">Kg</label>
+                        <input type="number" name="" class="mx-2 w-24 border-2 border-yellow-500 outline-none p-2" placeholder="Price">
+                        <div class="flex items-start justify-center">
+                            <div class="mx-4 text-center">
+                                <input type="checkbox" name="" id="out7"><label for="out7">Out1</label> <br>
+                                <input type="number" name="" class="w-24 border-2 border-yellow-500 outline-none p-2" placeholder="Quantity">
+                            </div>
+                            <div class="mx-4 text-center">
+                                <input type="checkbox" name="" id="out8"><label for="out8">Out2</label> <br>
+                                <input type="number" name="" class="w-24 border-2 border-yellow-500 outline-none p-2" placeholder="Quantity">
+                            </div>
+                            <div class="mx-4 text-center">
+                                <input type="checkbox" name="" id="out9"><label for="out9">Out3</label> <br>
+                                <input type="number" name="" class="w-24 border-2 border-yellow-500 outline-none p-2" placeholder="Quantity">
+                            </div>
+                        </div>
+                        <input type="text" name="" class="w-32 border-2 border-yellow-500 outline-none p-2" placeholder="Minimum Unit">
+                    </div>
+                    <!-- for litre  -->
+                    <div class="my-4 flex items-center justify-center">
+                        <input type="checkbox" name="" id="litre" class="mx-2"> <label for="litre">Litre</label>
+                        <input type="number" name="" class="mx-2 w-24 border-2 border-yellow-500 outline-none p-2" placeholder="Price">
+                        <div class="flex items-start justify-center">
+                            <div class="mx-4 text-center">
+                                <input type="checkbox" name="" id="out10"><label for="out10">Out1</label> <br>
+                                <input type="number" name="" class="w-24 border-2 border-yellow-500 outline-none p-2" placeholder="Quantity">
+                            </div>
+                            <div class="mx-4 text-center">
+                                <input type="checkbox" name="" id="out11"><label for="out11">Out2</label> <br>
+                                <input type="number" name="" class="w-24 border-2 border-yellow-500 outline-none p-2" placeholder="Quantity">
+                            </div>
+                            <div class="mx-4 text-center">
+                                <input type="checkbox" name="" id="out12"><label for="out12">Out3</label> <br>
+                                <input type="number" name="" class="w-24 border-2 border-yellow-500 outline-none p-2" placeholder="Quantity">
+                            </div>
+                        </div>
+                        <input type="text" name="" class="w-32 border-2 border-yellow-500 outline-none p-2" placeholder="Minimum Unit">
+                    </div>
+                    <!-- for drum -->
+                    <div class="my-4 flex items-center justify-center">
+                        <input type="checkbox" name="" id="drum" class="mx-2"> <label for="drum">Drum</label>
+                        <input type="number" name="" class="mx-2 w-24 border-2 border-yellow-500 outline-none p-2" placeholder="Price">
+                        <div class="flex items-start justify-center">
+                            <div class="mx-4 text-center">
+                                <input type="checkbox" name="" id="out13"><label for="out13">Out1</label> <br>
+                                <input type="number" name="" class="w-24 border-2 border-yellow-500 outline-none p-2" placeholder="Quantity">
+                            </div>
+                            <div class="mx-4 text-center">
+                                <input type="checkbox" name="" id="out14"><label for="out14">Out2</label> <br>
+                                <input type="number" name="" class="w-24 border-2 border-yellow-500 outline-none p-2" placeholder="Quantity">
+                            </div>
+                            <div class="mx-4 text-center">
+                                <input type="checkbox" name="" id="out15"><label for="out15">Out3</label> <br>
+                                <input type="number" name="" class="w-24 border-2 border-yellow-500 outline-none p-2" placeholder="Quantity">
+                            </div>
+                        </div>
+                        <input type="text" name="" class="w-32 border-2 border-yellow-500 outline-none p-2" placeholder="Minimum Unit">
+                    </div>
+                    <!-- for bosta  -->
+                    <div class="my-4 flex items-center justify-center">
+                        <input type="checkbox" name="" id="bosta" class="mx-2"> <label for="bosta">Bosta</label>
+                        <input type="number" name="" class="mx-2 w-24 border-2 border-yellow-500 outline-none p-2" placeholder="Price">
+                        <div class="flex items-start justify-center">
+                            <div class="mx-4 text-center">
+                                <input type="checkbox" name="" id="out16"><label for="out16">Out1</label> <br>
+                                <input type="number" name="" class="w-24 border-2 border-yellow-500 outline-none p-2" placeholder="Quantity">
+                            </div>
+                            <div class="mx-4 text-center">
+                                <input type="checkbox" name="" id="out17"><label for="out17">Out2</label> <br>
+                                <input type="number" name="" class="w-24 border-2 border-yellow-500 outline-none p-2" placeholder="Quantity">
+                            </div>
+                            <div class="mx-4 text-center">
+                                <input type="checkbox" name="" id="out18"><label for="out18">Out3</label> <br>
+                                <input type="number" name="" class="w-24 border-2 border-yellow-500 outline-none p-2" placeholder="Quantity">
+                            </div>
+                        </div>
+                        <input type="text" name="" class="w-32 border-2 border-yellow-500 outline-none p-2" placeholder="Minimum Unit">
+                    </div>
+                    <!-- for carton  -->
+                    <div class="my-4 flex items-center justify-center">
+                        <input type="checkbox" name="" id="carton" class="mx-2"> <label for="carton">Carton</label>
+                        <input type="number" name="" class="mx-2 w-24 border-2 border-yellow-500 outline-none p-2" placeholder="Price">
+                        <div class="flex items-start justify-center">
+                            <div class="mx-4 text-center">
+                                <input type="checkbox" name="" id="out19"><label for="out19">Out1</label> <br>
+                                <input type="number" name="" class="w-24 border-2 border-yellow-500 outline-none p-2" placeholder="Quantity">
+                            </div>
+                            <div class="mx-4 text-center">
+                                <input type="checkbox" name="" id="out20"><label for="out20">Out2</label> <br>
+                                <input type="number" name="" class="w-24 border-2 border-yellow-500 outline-none p-2" placeholder="Quantity">
+                            </div>
+                            <div class="mx-4 text-center">
+                                <input type="checkbox" name="" id="out21"><label for="out21">Out3</label> <br>
+                                <input type="number" name="" class="w-24 border-2 border-yellow-500 outline-none p-2" placeholder="Quantity">
+                            </div>
+                        </div>
+                        <input type="text" name="" class="w-32 border-2 border-yellow-500 outline-none p-2" placeholder="Minimum Unit">
+                    </div>
+                </div>
+                <input type="submit" value="Save" class="bg-yellow-500 text-white px-3 py-2 rounded-lg">
+            </form>
         </div>
         <div class="responsive md:p-4">
             <table id="product_list" class="w-full text-center text-white text-xs md:text:md lg:text-lg">
